@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/legelowes/_code/ValveSocketsWrapper/ValveSocketsWrapper.csproj": {}
+  },
+  "projects": {
+    "/home/legelowes/_code/ValveSocketsWrapper/ValveSocketsWrapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/legelowes/_code/ValveSocketsWrapper/ValveSocketsWrapper.csproj",
+        "projectName": "ValveSocketsWrapper",
+        "projectPath": "/home/legelowes/_code/ValveSocketsWrapper/ValveSocketsWrapper.csproj",
+        "packagesPath": "/home/legelowes/.nuget/packages/",
+        "outputPath": "/home/legelowes/_code/ValveSocketsWrapper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/legelowes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/162/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
