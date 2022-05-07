@@ -20,11 +20,11 @@ namespace FLORENCE_Networking_Framework
 // 	******************************************************************************************************************************************************
         public Framework()
         {
-            this.library_Dynamic_Networking_Backend = new Dynamic_Networking_Backend();
-            while(this.library_Dynamic_Networking_Backend == null) { }
+            this.library_Dynamic_Server_Networking = new Dynamic_Server_Networking();
+            while(this.library_Dynamic_Server_Networking == null) { }
             
-            this.library_Dynamic_Networking_Frontend = new Dynamic_Networking_Frontend();
-            while(this.library_Dynamic_Networking_Backend == null) { }
+            this.library_Dynamic_Client_Networking = new Dynamic_Client_Networking();
+            while(this.library_Dynamic_Client_Networking == null) { }
         }
 
 
@@ -32,13 +32,13 @@ namespace FLORENCE_Networking_Framework
 // 	******************************************************************************************************************************************************
 
 //	GET & SET --------------------------------------------------------------------------------------------------------------------------------------------
-        public Dynamic_Networking_Backend getDynamicNetworkingBackendFramework()
+        public Dynamic_Server_Networking getDynamicNetworkingBackendFramework()
         {
-            return this.library_Dynamic_Networking_Backend;
+            return this.library_Dynamic_Server_Networking;
         }
-        public Dynamic_Networking_Frontend getDynamicNetworkingFrontendFramework()
+        public Dynamic_Client_Networking getDynamicNetworkingFrontendFramework()
         {
-            return this.library_Dynamic_Networking_Frontend;
+            return this.library_Dynamic_Client_Networking;
         }
 //	PROTECTED ============================================================================================================================================
 //  ======================================================================================================================================================
@@ -67,8 +67,8 @@ namespace FLORENCE_Networking_Framework
 
 //	REGISTERS ********************************************************************************************************************************************
 // 	******************************************************************************************************************************************************
-        private Dynamic_Networking_Backend library_Dynamic_Networking_Backend;
-        private Dynamic_Networking_Frontend library_Dynamic_Networking_Frontend;
+        private Dynamic_Server_Networking library_Dynamic_Server_Networking;
+        private Dynamic_Client_Networking library_Dynamic_Client_Networking;
         
 //	METHODS **********************************************************************************************************************************************
 // 	******************************************************************************************************************************************************
@@ -77,7 +77,7 @@ namespace FLORENCE_Networking_Framework
           
     }
 
-    public class Dynamic_Networking_Backend
+    public class Dynamic_Server_Networking
     {
 //	PUBLIC -==============================================================================================================================================
 //  ======================================================================================================================================================
@@ -92,11 +92,12 @@ namespace FLORENCE_Networking_Framework
 
 //	CONSTRUCTOR ******************************************************************************************************************************************
 // 	******************************************************************************************************************************************************
-        public Dynamic_Networking_Backend()
+        public Dynamic_Server_Networking()
         {
+            Valve.Sockets.Library.Initialize();
             this.StartANewServer();
         }
-        ~Dynamic_Networking_Backend()
+        ~Dynamic_Server_Networking()
         {
 
         }
@@ -246,7 +247,7 @@ namespace FLORENCE_Networking_Framework
 
     }
 
-    public class Dynamic_Networking_Frontend
+    public class Dynamic_Client_Networking
     {
 //	PUBLIC -==============================================================================================================================================
 //  ======================================================================================================================================================
@@ -261,11 +262,12 @@ namespace FLORENCE_Networking_Framework
 
 //	CONSTRUCTOR ******************************************************************************************************************************************
 // 	******************************************************************************************************************************************************
-        public Dynamic_Networking_Frontend()
+        public Dynamic_Client_Networking()
         {
+            Valve.Sockets.Library.Initialize();
             this.StartANewClient();
         }
-        ~Dynamic_Networking_Frontend()
+        ~Dynamic_Client_Networking()
         {
 
         }
